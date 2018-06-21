@@ -1,4 +1,4 @@
-{% set version = '0.7-1' %}
+{% set version = "0.7-4" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/tm_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/tm/tm_{{ version }}.tar.gz
-  sha256: 184dc285d3c53b8b4adacfd78b2b098c1bf8ead948d18719efa979a4a6cfe6fc
+  sha256: ca2783b5d481e28e05b6856b38b7f3169e960e2f8997bb5046aff040b3026cef
 
 build:
   number: 0
