@@ -29,12 +29,14 @@ requirements:
     - r-nlp >=0.1_6.2
     - r-rcpp
     - r-slam >=0.1_37
+    - r-xml2
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
 
   run:
     - r-base
+    - r-xml2
     - r-bh
     - r-nlp >=0.1_6.2
     - r-rcpp
