@@ -1,4 +1,4 @@
-{% set version = '0.7-6' %}
+{% set version = "0.7-7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tm/tm_{{ version }}.tar.gz
-  sha256: 3995ef712ce4454d2cbaef4c1e9b2f8379c96c7edaa3de5b1eb8df25e720fb6a
+  sha256: d0dbe41ff8414bdc2eee06a1b0d6db4567850135c4c6ff0a9c9ca8239166d15f
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
