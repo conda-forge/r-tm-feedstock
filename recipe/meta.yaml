@@ -1,4 +1,4 @@
-{% set version = "0.7-14" %}
+{% set version = "0.7-15" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tm/tm_{{ version }}.tar.gz
-  sha256: 7a1eeee86cbb1ac56b32fb50e700e6a4b71049c56529ca85754107b8534d7680
+  sha256: 7ca52b47f6d8958dfe40499a87add5f20063b08c686685f4ff773ad5076a5be5
 
 build:
   number: 0
