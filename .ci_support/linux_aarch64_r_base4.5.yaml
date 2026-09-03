@@ -11,7 +11,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cran_mirror:
-- https://cran.r-project.org
+- https://cloud.r-project.org
 cxx_compiler:
 - gxx
 cxx_compiler_version:
