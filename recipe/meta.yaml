@@ -3,7 +3,7 @@
 
 package:
   name: r-tm
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
@@ -16,6 +16,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -45,6 +49,7 @@ requirements:
     - r-xml2
   run:
     - r-base
+    #- r-bh
     - r-nlp >=0.2_0
     - r-rcpp
     - r-slam >=0.1_37
@@ -60,7 +65,8 @@ about:
   license: GPL-3.0-only
   summary: A framework for text mining applications within R.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
